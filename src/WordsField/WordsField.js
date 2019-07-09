@@ -1,8 +1,11 @@
 import React from 'react';
 
+import {WordField} from './style'
+
 const wordField=()=>{
     return(
-        <div>Word field</div>
+        <WordField>Word field</WordField>
+
     );
 };
 
