@@ -1,11 +1,18 @@
 import React,{Component} from 'react';
 
+import {PlayingWrapper} from './style';
+
 import Hangman from '../Hangman/Hangman';
+import WordField from '../WordsField/WordsField';
 
 class PlayingField extends Component{
     render(){
         return(
-            <Hangman/>
+            <PlayingWrapper>
+                <Hangman/>
+                <WordField/>
+            </PlayingWrapper>
+
         );
     };
 };
