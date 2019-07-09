@@ -1,9 +1,10 @@
 import React from 'react';
 
+import {Wrapper} from './style';
 
 const hangman =()=>{
     return(
-        <div>Hangman</div>
+        <Wrapper>Hangman</Wrapper>
     );
 };
 
