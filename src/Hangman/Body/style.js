@@ -38,6 +38,13 @@ export const Core = styled.div`
 `;
 
 export const Hand = styled.div`
+width: 3rem;
+height: 10rem;
+background-color: orange;
+position: absolute;
+top: 13rem;
+right: 50%;
+transform: rotate(45deg) translate(-2.5rem,2rem);
 
 `;
 

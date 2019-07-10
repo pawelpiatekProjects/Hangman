@@ -105,8 +105,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Hangman/Body/style.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+            <state relative-caret-position="791">
+              <caret line="48" column="2" lean-forward="true" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -213,12 +213,12 @@
       <option name="presentableId" value="Default" />
       <updated>1562704930387</updated>
       <workItem from="1562704932417" duration="2490000" />
-      <workItem from="1562747075522" duration="2247000" />
+      <workItem from="1562747075522" duration="3108000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4737000" />
+    <option name="totallyTimeSpent" value="5598000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2345" y="0" width="1502" height="1047" extended-state="0" />
@@ -335,8 +335,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Hangman/Body/style.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+        <state relative-caret-position="791">
+          <caret line="48" column="2" lean-forward="true" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
         </state>
       </provider>
     </entry>
