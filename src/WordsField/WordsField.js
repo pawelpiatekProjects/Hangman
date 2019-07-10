@@ -7,7 +7,7 @@ import {WordField} from './style'
 const wordField=(props)=>{
     return(
         <WordField>
-            <Word word={props.word}/>
+            <Word  word={props.word}/>
         </WordField>
 
     );
