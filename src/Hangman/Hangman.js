@@ -1,10 +1,14 @@
 import React from 'react';
 
+import Body from './Body/Body';
+
 import {Wrapper} from './style';
 
 const hangman =()=>{
     return(
-        <Wrapper>Hangman</Wrapper>
+        <Wrapper>
+            <Body/>
+        </Wrapper>
     );
 };
 
