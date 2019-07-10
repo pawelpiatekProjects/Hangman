@@ -24,6 +24,7 @@ export const Head = styled.div`
   transform: translateX(50%);
   margin: 0 auto;
   z-index: 10;
+  opacity: ${props=>props.errorCount>0 ? 1 : 0};
   
   &::before{
   content: "";
@@ -49,6 +50,7 @@ export const Core = styled.div`
   top: 13rem;
   right: 50%;
   transform: translateX(50%);
+  opacity: ${props=>props.errorCount>1 ? 1 : 0};
 `;
 
 export const HandLeft = styled.div`
@@ -59,6 +61,7 @@ position: absolute;
 top: 13rem;
 right: 50%;
 transform:  translate(-3.5rem,-.25rem) rotate(45deg);
+opacity: ${props=>props.errorCount>2 ? 1 : 0};
 
 `;
 
@@ -70,7 +73,7 @@ position: absolute;
 top: 13rem;
 left: 50%;
 transform:  translate(3.5rem,-.25rem) rotate(-45deg);
-
+opacity: ${props=>props.errorCount>3 ? 1 : 0};
 `;
 
 export const LegLeft = styled.div`
@@ -81,6 +84,7 @@ position: absolute;
 top: 25rem;
 right: 50%;
 transform:  translate(-2rem,1rem) rotate(35deg);
+opacity: ${props=>props.errorCount>4 ? 1 : 0};
 `;
 
 export const LegRight = styled.div`
@@ -91,4 +95,5 @@ position: absolute;
 top: 25rem;
 left: 50%;
 transform:  translate(2rem,1rem) rotate(-35deg);
+opacity: ${props=>props.errorCount>5 ? 1 : 0};
 `;

@@ -32,8 +32,9 @@ class PlayingField extends Component{
         errors:0
     }
 
+
     handleCheck =(key)=>{
-        let errors=0;
+        let errors =this.state.errors;
          const wordCoppy = [...this.state.word];
          const word = wordCoppy.map(item=>{
              return item.wordContent;
@@ -48,8 +49,12 @@ class PlayingField extends Component{
         }
         else {
             errors++;
-           // this.setState({errors:errors})
-            console.log(this.state.errors);
+            this.setState({errors:errors})
+
+            //errors limit
+            if(this.state.errors>6){
+                alert('you lost');
+            }
         }
 
 
@@ -63,7 +68,7 @@ class PlayingField extends Component{
         //const wordArr = this.state.word;
         return(
             <PlayingWrapper onKeyDown={(e)=> this.handleKeyPress(e)}>
-                <Hangman/>
+                <Hangman errors={this.state.errors}/>
                 <WordField word={this.state.word}/>
                 <KeyboardEventHandler handleKeys={['alphabetic']}
                                       onKeyEvent={this.handleCheck}/>

@@ -4,10 +4,10 @@ import Body from './Body/Body';
 
 import {Wrapper} from './style';
 
-const hangman =()=>{
+const hangman =(props)=>{
     return(
         <Wrapper>
-            <Body/>
+            <Body errors={props.errors}/>
         </Wrapper>
     );
 };
