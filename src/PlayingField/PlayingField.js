@@ -29,22 +29,43 @@ class PlayingField extends Component{
             {wordContent:'a',corectness:false},
             {wordContent:'n',corectness:false}
 
-        ]
+        ],
+        errors:0
     }
 
     handleCheck =(key)=>{
-        // let wordCoppy = [...this.state.word];
-        console.log(key);
+        let errors=0;
+         const wordCoppy = [...this.state.word];
+         const word = wordCoppy.map(item=>{
+             return item.wordContent;
+         })
+        //let letter = key;
+        //console.log(word)
+        if(word.includes(key)){
+            let index =word.indexOf(key)
+            wordCoppy[index].corectness=true;
+            console.log(wordCoppy);
+
+        }
+        else {
+            errors++;
+           // this.setState({errors:errors})
+            console.log(this.state.errors);
+        }
+
+
+        this.setState({word:wordCoppy});
+        console.log(this.state.word);
     }
 
 
 
     render(){
-        const wordArr = this.state.word;
+        //const wordArr = this.state.word;
         return(
             <PlayingWrapper onKeyDown={(e)=> this.handleKeyPress(e)}>
                 <Hangman/>
-                <WordField word={wordArr}/>
+                <WordField word={this.state.word}/>
                 <KeyboardEventHandler handleKeys={['alphabetic']}
                                       onKeyEvent={this.handleCheck}/>
             </PlayingWrapper>
