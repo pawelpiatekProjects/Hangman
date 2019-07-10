@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {BodyWrapper,Head, Core, HandLeft, HandRight, Leg} from './style'
+import {BodyWrapper,Head, Core, HandLeft, HandRight, LegLeft,LegRight} from './style'
 
 const body =()=>{
     return(
@@ -9,7 +9,8 @@ const body =()=>{
             <Core/>
             <HandLeft/>
             <HandRight/>
-            <Leg/>
+            <LegLeft/>
+            <LegRight/>
         </BodyWrapper>
     );
 };

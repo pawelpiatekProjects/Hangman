@@ -40,7 +40,7 @@ export const Core = styled.div`
 export const HandLeft = styled.div`
 width: 3rem;
 height: 10rem;
-background-color: orange;
+background-color: brown;
 position: absolute;
 top: 13rem;
 right: 50%;
@@ -51,7 +51,7 @@ transform:  translate(-3.5rem,-.25rem) rotate(45deg);
 export const HandRight = styled.div`
 width: 3rem;
 height: 10rem;
-background-color: orange;
+background-color: brown;
 position: absolute;
 top: 13rem;
 left: 50%;
@@ -59,6 +59,22 @@ transform:  translate(3.5rem,-.25rem) rotate(-45deg);
 
 `;
 
-export const Leg = styled.div`
+export const LegLeft = styled.div`
+width: 3rem;
+height: 12rem;
+background-color: brown;
+position: absolute;
+top: 25rem;
+right: 50%;
+transform:  translate(-2rem,1rem) rotate(35deg);
+`;
 
+export const LegRight = styled.div`
+width: 3rem;
+height: 12rem;
+background-color: brown;
+position: absolute;
+top: 25rem;
+left: 50%;
+transform:  translate(2rem,1rem) rotate(-35deg);
 `;
