@@ -3,16 +3,12 @@ import React from 'react';
 import Letter from '../Letter/Letter';
 import {WordWrapper} from './style';
 
-const word =()=>{
+const word =(props)=>{
     return(
         <WordWrapper>
-            <Letter letter="H"/>
-            <Letter letter="A"/>
-            <Letter letter="N"/>
-            <Letter letter="G"/>
-            <Letter letter="M"/>
-            <Letter letter="A"/>
-            <Letter letter="N"/>
+            {props.word.map(letter=>{
+                return <Letter letter={letter.toUpperCase()}/>
+            })}
         </WordWrapper>
     );
 };

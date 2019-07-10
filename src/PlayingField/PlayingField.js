@@ -6,11 +6,17 @@ import Hangman from '../Hangman/Hangman';
 import WordField from '../WordsField/WordsField';
 
 class PlayingField extends Component{
+    state={
+        word:'Hangman'
+
+    }
+
     render(){
+        const wordArr = this.state.word.split('');
         return(
             <PlayingWrapper>
                 <Hangman/>
-                <WordField/>
+                <WordField word={wordArr}/>
             </PlayingWrapper>
 
         );

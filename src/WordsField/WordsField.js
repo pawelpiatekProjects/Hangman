@@ -4,10 +4,10 @@ import Word from './Word/Word';
 
 import {WordField} from './style'
 
-const wordField=()=>{
+const wordField=(props)=>{
     return(
         <WordField>
-            <Word/>
+            <Word word={props.word}/>
         </WordField>
 
     );
