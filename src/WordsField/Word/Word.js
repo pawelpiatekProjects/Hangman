@@ -9,9 +9,8 @@ const word =(props)=>{
     return(
         <WordWrapper>
             {props.word.map(letter=>{
-                return <Letter ket={letter.charCodeAt(0)+d.getMilliseconds()}
-                               letter={letter.toUpperCase()}
-                visable={true}/>
+                return <Letter letter={letter.wordContent.toUpperCase()}
+                visable={letter.corectness}/>
 
             })}
         </WordWrapper>
