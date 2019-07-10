@@ -1,13 +1,14 @@
 import React from 'react';
 
-import {BodyWrapper,Head, Core, Hand, Leg} from './style'
+import {BodyWrapper,Head, Core, HandLeft, HandRight, Leg} from './style'
 
 const body =()=>{
     return(
         <BodyWrapper>
             <Head/>
             <Core/>
-            <Hand/>
+            <HandLeft/>
+            <HandRight/>
             <Leg/>
         </BodyWrapper>
     );

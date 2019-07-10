@@ -37,14 +37,25 @@ export const Core = styled.div`
   transform: translateX(50%);
 `;
 
-export const Hand = styled.div`
+export const HandLeft = styled.div`
 width: 3rem;
 height: 10rem;
 background-color: orange;
 position: absolute;
 top: 13rem;
 right: 50%;
-transform: rotate(45deg) translate(-2.5rem,2rem);
+transform:  translate(-3.5rem,-.25rem) rotate(45deg);
+
+`;
+
+export const HandRight = styled.div`
+width: 3rem;
+height: 10rem;
+background-color: orange;
+position: absolute;
+top: 13rem;
+left: 50%;
+transform:  translate(3.5rem,-.25rem) rotate(-45deg);
 
 `;
 
