@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const LetterWrapper = styled.p`
   font-size: 5rem;
-  opacity: ${props=>props.display ===true ? 1 : 0};
+  opacity: ${props=>props.display ==true ? 1 : 0};
   
  
   `;

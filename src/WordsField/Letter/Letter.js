@@ -10,6 +10,7 @@ const letter = (props) => {
     else
         display = 0;
 
+
     return (
         <UnderlinedLetter>
             <LetterWrapper display={display} >{props.letter}</LetterWrapper>
