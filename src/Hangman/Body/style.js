@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const BodyWrapper = styled.div`
 background-color: #eee;
 
-height: 100rem;
+height: calc(100% - 6rem);
 justify-self: center;
 margin: 3rem;
 padding: 3rem;
@@ -23,6 +23,20 @@ export const Head = styled.div`
   right: 50%;
   transform: translateX(50%);
   margin: 0 auto;
+  z-index: 10;
+  
+  &::before{
+  content: "";
+  display: block;
+  width: 1rem;
+  height: 3rem;
+  background-color: orange;
+  position: absolute;
+  top: -3rem;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 1;
+  }
 `;
 
 export const Core = styled.div`

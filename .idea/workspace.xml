@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cac6f3d8-aa13-4ec5-8a8d-52ca50404078" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Hangman/Body/Body.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hangman/Body/Body.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hangman/Body/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hangman/Body/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hangman/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hangman/style.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -55,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Hangman/style.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+            <state relative-caret-position="125">
+              <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -106,11 +106,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Hangman/Body/style.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="591">
-              <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-              <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
-              <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
-              <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
+            <state relative-caret-position="475">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
@@ -124,7 +121,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/Hangman/style.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/PlayingField/PlayingField.js" />
         <option value="$PROJECT_DIR$/src/WordsField/style.js" />
@@ -133,6 +129,7 @@
         <option value="$PROJECT_DIR$/src/PlayingField/style.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/Hangman/Body/Body.js" />
+        <option value="$PROJECT_DIR$/src/Hangman/style.js" />
         <option value="$PROJECT_DIR$/src/Hangman/Body/style.js" />
       </list>
     </option>
@@ -217,12 +214,12 @@
       <option name="presentableId" value="Default" />
       <updated>1562704930387</updated>
       <workItem from="1562704932417" duration="2490000" />
-      <workItem from="1562747075522" duration="4091000" />
+      <workItem from="1562747075522" duration="4722000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6581000" />
+    <option name="totallyTimeSpent" value="7212000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2345" y="0" width="1502" height="1047" extended-state="0" />
@@ -286,13 +283,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hangman/style.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayingField/PlayingField.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -327,6 +317,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hangman/style.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Hangman/Body/Body.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -339,11 +336,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Hangman/Body/style.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-          <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
-          <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
-          <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
+        <state relative-caret-position="475">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>
