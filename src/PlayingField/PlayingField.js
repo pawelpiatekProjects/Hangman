@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import KeyboardEventHandler from 'react-keyboard-event-handler';
+import axios from '../axios';
 
 import {PlayingWrapper} from './style';
 
@@ -9,7 +10,7 @@ import WordField from '../WordsField/WordsField';
 class PlayingField extends Component{
     //firebase fetch in componentWillMount
     state={
-        keyWord:{
+
             word:[
                 {wordContent: 'c', corectness: false},
                 {wordContent: 'o', corectness: false},
@@ -21,17 +22,42 @@ class PlayingField extends Component{
                 {wordContent: 'r', corectness: false}
 
             ],
-            category:'Electronic device'
-        },
+
+
+        category:'Electronic device',
+
 
         errors:0,
 
     }
 
+    componentDidMount() {
+        axios.get('https://hangman-c8d9f.firebaseio.com/words.json').then(response=>{
+            const data = response.data;
+
+            const keys = Object.keys(data);
+            const words = keys.map(item=>{
+               return item.split('').map(el=>{
+                   return {wordContent: el, corectness:false}
+               });
+            });
+            const numberOfItems = words.length;
+            const index =this.generateRandom(numberOfItems);
+             console.log(words[index]);
+             const word = words[index];
+            this.setState({word:word});
+        }).catch(error => console.log(error))
+    }
+
+    generateRandom=(max)=>{
+        let min =0;
+        let newMax = max-1;
+        return Math.floor(Math.random()*(newMax-min+1))+min;
+    }
 
     handleCheck =(key)=>{
         let errors =this.state.errors;
-         const wordCoppy = [...this.state.keyWord.word];
+         const wordCoppy = [...this.state.word];
          const word = wordCoppy.map(item=>{
              return item.wordContent;
          })
@@ -63,8 +89,8 @@ class PlayingField extends Component{
         return(
             <PlayingWrapper onKeyDown={(e)=> this.handleKeyPress(e)}>
                 <Hangman errors={this.state.errors}/>
-                <WordField word={this.state.keyWord.word}
-                category={this.state.keyWord.category}/>
+                <WordField word={this.state.word}
+                category={this.state.category}/>
                 <KeyboardEventHandler handleKeys={['alphabetic']}
                                       onKeyEvent={this.handleCheck}/>
             </PlayingWrapper>
