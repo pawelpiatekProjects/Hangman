@@ -9,23 +9,29 @@ import WordField from '../WordsField/WordsField';
 class PlayingField extends Component{
     //firebase fetch in componentWillMount
     state={
-        word:[
-            {wordContent:'c',corectness:false},
-            {wordContent:'o',corectness:false},
-            {wordContent:'m',corectness:false},
-            {wordContent:'p',corectness:false},
-            {wordContent:'u',corectness:false},
-            {wordContent:'t',corectness:false},
-            {wordContent:'e',corectness:false},
-            {wordContent:'r',corectness:false}
-        ],
-        errors:0
+        keyWord:{
+            word:[
+                {wordContent: 'c', corectness: false},
+                {wordContent: 'o', corectness: false},
+                {wordContent: 'm', corectness: false},
+                {wordContent: 'p', corectness: false},
+                {wordContent: 'u', corectness: false},
+                {wordContent: 't', corectness: false},
+                {wordContent: 'e', corectness: false},
+                {wordContent: 'r', corectness: false}
+
+            ],
+            category:'Electronic device'
+        },
+
+        errors:0,
+
     }
 
 
     handleCheck =(key)=>{
         let errors =this.state.errors;
-         const wordCoppy = [...this.state.word];
+         const wordCoppy = [...this.state.keyWord.word];
          const word = wordCoppy.map(item=>{
              return item.wordContent;
          })
@@ -57,7 +63,8 @@ class PlayingField extends Component{
         return(
             <PlayingWrapper onKeyDown={(e)=> this.handleKeyPress(e)}>
                 <Hangman errors={this.state.errors}/>
-                <WordField word={this.state.word}/>
+                <WordField word={this.state.keyWord.word}
+                category={this.state.keyWord.category}/>
                 <KeyboardEventHandler handleKeys={['alphabetic']}
                                       onKeyEvent={this.handleCheck}/>
             </PlayingWrapper>
