@@ -6,6 +6,7 @@ import {PlayingWrapper} from './style';
 
 import Hangman from '../Hangman/Hangman';
 import WordField from '../WordsField/WordsField';
+import PopUp from '../Popup/Popup';
 
 class PlayingField extends Component{
     //firebase fetch in componentWillMount
@@ -27,7 +28,8 @@ class PlayingField extends Component{
         category:'Electronic device',
         length:0,
         goodMoves:0,
-        errors:0
+        errors:0,
+        ending:''
 
     }
 
@@ -65,11 +67,11 @@ class PlayingField extends Component{
         return Math.floor(Math.random()*(newMax-min+1))+min;
     }
 
-    delay = (name)=>{
-        window.setTimeout(f=>{
-            alert(name);
-        },300)
-    }
+    // delay = (name)=>{
+    //     window.setTimeout(f=>{
+    //         this.setState({ending:name})
+    //     },300)
+    // }
 
     handleCheck =(key)=>{
         let errors =this.state.errors;
@@ -99,12 +101,12 @@ class PlayingField extends Component{
 
              //errors limit
              if(this.state.errors>=6){
-                 this.delay('you lost');
+                 this.setState({ending:'lost'})
              }
          }
         this.setState({word:wordCoppy});
         if(goodMoves>=this.state.length){
-            this.delay('you won');
+            this.setState({ending:'won'})
         }
 
     };
@@ -112,6 +114,7 @@ class PlayingField extends Component{
     render(){
 
         return(
+            <div>
             <PlayingWrapper onKeyDown={(e)=> this.handleKeyPress(e)}>
                 <Hangman errors={this.state.errors}/>
                 <WordField word={this.state.word}
@@ -119,7 +122,10 @@ class PlayingField extends Component{
                 />
                 <KeyboardEventHandler handleKeys={['alphabetic']}
                                       onKeyEvent={this.handleCheck}/>
+
             </PlayingWrapper>
+            <PopUp ending={this.state.ending}/>
+            </div>
 
         );
     };
