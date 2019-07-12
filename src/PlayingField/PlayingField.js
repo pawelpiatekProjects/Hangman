@@ -6,28 +6,18 @@ import {PlayingWrapper} from './style';
 import Hangman from '../Hangman/Hangman';
 import WordField from '../WordsField/WordsField';
 
-
-
-// const handleKey = (e)=>{
-//     console.log(e.key);
-//
-// }
-//
-// let currentLetter =document.addEventListener('keypress',handleKey);
-//
-// console.log(currentLetter);
-
-
 class PlayingField extends Component{
+    //firebase fetch in componentWillMount
     state={
         word:[
+            {wordContent:'c',corectness:false},
+            {wordContent:'o',corectness:false},
+            {wordContent:'m',corectness:false},
             {wordContent:'p',corectness:false},
-            {wordContent:'l',corectness:false},
-            {wordContent:'a',corectness:false},
-            {wordContent:'n',corectness:false},
-            {wordContent:'a',corectness:false}
-
-
+            {wordContent:'u',corectness:false},
+            {wordContent:'t',corectness:false},
+            {wordContent:'e',corectness:false},
+            {wordContent:'r',corectness:false}
         ],
         errors:0
     }
@@ -62,10 +52,8 @@ class PlayingField extends Component{
 
     };
 
-
-
     render(){
-        //const wordArr = this.state.word;
+
         return(
             <PlayingWrapper onKeyDown={(e)=> this.handleKeyPress(e)}>
                 <Hangman errors={this.state.errors}/>
