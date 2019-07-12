@@ -41,15 +41,26 @@ class PlayingField extends Component{
          })
         console.log(key);
          console.log(wordCoppy[0].wordContent);
-        for(let index of Object.keys(wordCoppy)){
-                console.log(`${wordCoppy[index].wordContent} + ${key}`);
-            if(wordCoppy[index].wordContent === key){
-                        wordCoppy[index].corectness = true;
-                    }
-            }
+         if(word.includes(key)){
+             for(let index of Object.keys(wordCoppy)){
+                 console.log(`${wordCoppy[index].wordContent} + ${key}`);
+                 if(wordCoppy[index].wordContent === key){
+                     wordCoppy[index].corectness = true;
+                 }
+             }
+         }
+         else {
+             errors++;
+             this.setState({errors:errors})
+
+             //errors limit
+             if(this.state.errors>6){
+                 alert('you lost');
+             }
+         }
         this.setState({word:wordCoppy});
 
-    }
+    };
 
 
 
