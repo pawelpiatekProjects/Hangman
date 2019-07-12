@@ -25,7 +25,7 @@ class PlayingField extends Component{
             {wordContent:'l',corectness:false},
             {wordContent:'a',corectness:false},
             {wordContent:'n',corectness:false},
-            {wordContent:'e',corectness:false}
+            {wordContent:'a',corectness:false}
 
 
         ],
@@ -39,27 +39,16 @@ class PlayingField extends Component{
          const word = wordCoppy.map(item=>{
              return item.wordContent;
          })
-        //let letter = key;
-        //console.log(word)
-        if(word.includes(key)){
-            let index =word.indexOf(key)
-            wordCoppy[index].corectness=true;
-            console.log(wordCoppy);
-
-        }
-        else {
-            errors++;
-            this.setState({errors:errors})
-
-            //errors limit
-            if(this.state.errors>6){
-                alert('you lost');
+        console.log(key);
+         console.log(wordCoppy[0].wordContent);
+        for(let index of Object.keys(wordCoppy)){
+                console.log(`${wordCoppy[index].wordContent} + ${key}`);
+            if(wordCoppy[index].wordContent === key){
+                        wordCoppy[index].corectness = true;
+                    }
             }
-        }
-
-
         this.setState({word:wordCoppy});
-        console.log(this.state.word);
+
     }
 
 
