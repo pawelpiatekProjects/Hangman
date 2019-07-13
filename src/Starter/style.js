@@ -36,5 +36,5 @@ margin: 5rem auto;
 export const HangmanContainer = styled.div`
 width: 30rem;
 height: 50rem;
-background: red;
+
 `;

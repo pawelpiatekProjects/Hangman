@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const BodyWrapper = styled.div`
-background-color: #eee;
+
 
 height: calc(100% - 6rem);
 justify-self: center;
@@ -10,6 +10,10 @@ padding: 3rem;
 position: relative;
 
 `;
+
+export const Gallows = styled.div`
+
+`
 
 export const Head = styled.div`
   width: 10rem;
@@ -42,6 +46,46 @@ export const Head = styled.div`
   }
 `;
 
+export const EyeLeft = styled.div`
+width: 3rem;
+height: 4px;
+background: red;
+position: absolute;
+top: 4rem;
+left: 1.5rem;
+transform: rotate(45deg);
+&::after{
+content: "";
+width: 3rem;
+height: 4px;
+background: red;
+
+
+transform: rotate(90deg);
+display: block;
+}
+`;
+
+export const EyeRight = styled.div`
+width: 3rem;
+height: 4px;
+background: red;
+position: absolute;
+top: 4rem;
+right: 1.5rem;
+transform: rotate(45deg);
+&::after{
+content: "";
+width: 3rem;
+height: 4px;
+background: red;
+
+
+transform: rotate(90deg);
+display: block;
+}
+`;
+
 export const Core = styled.div`
   width: 7rem;
   height: 4rem;
@@ -55,7 +99,6 @@ export const Core = styled.div`
   transform: translateX(50%);
   border-radius: 1rem 1rem 0 0;
   z-index: 10;
-  
 
   //clip-path: polygon(0 0 ,100% 0,100% 85%,0 100%);
   &::after{
@@ -82,6 +125,7 @@ top: 13rem;
 right: 50%;
 transform:  translate(-4rem,-.25rem) rotate(20deg);
 border-radius: 2rem;
+
 &::after{
 content: "";
 width: 2.3rem;
@@ -101,6 +145,7 @@ top: 13rem;
 left: 50%;
 transform:  translate(4rem,-.25rem) rotate(-20deg);
 border-radius: 2rem;
+
 &::after{
 content: "";
 width: 2.3rem;
@@ -151,6 +196,7 @@ left: 50%;
 transform:  translate(1rem,1rem) rotate(-10deg);
 z-index: 2;
 border-radius: 0 0 1rem 1rem;
+
 &::after{
 content: "";
 display: block;

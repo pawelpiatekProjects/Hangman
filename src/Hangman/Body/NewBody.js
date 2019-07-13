@@ -1,17 +1,21 @@
 import React from 'react';
 
-import {BodyWrapper,Head, Core, HandLeft, HandRight, LegLeft,LegRight} from './styleNewBody'
+import {BodyWrapper,Head,EyeLeft,EyeRight, Core, HandLeft, HandRight, LegLeft,LegRight, Gallows} from './styleNewBody'
 
-const newBody =(props)=>{
-    let errorCount = props.errors;
+const newBody =()=>{
+
     return(
         <BodyWrapper>
-            <Head errorCount={errorCount}/>
-            <Core errorCount={errorCount}/>
-            <HandLeft errorCount={errorCount}/>
-            <HandRight errorCount={errorCount}/>
-            <LegLeft errorCount={errorCount}/>
-            <LegRight errorCount={errorCount}/>
+            <Gallows/>
+            <Head >
+                <EyeLeft/>
+                <EyeRight/>
+            </Head>
+            <Core />
+            <HandLeft/>
+            <HandRight />
+            <LegLeft />
+            <LegRight />
         </BodyWrapper>
     );
 };

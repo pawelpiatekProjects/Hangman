@@ -1,12 +1,16 @@
 import React from 'react';
 
-import {BodyWrapper,Head, Core, HandLeft, HandRight, LegLeft,LegRight} from './style'
+import {BodyWrapper,Head,EyeLeft,EyeRight, Core, HandLeft, HandRight, LegLeft,LegRight} from './style'
+
 
 const body =(props)=>{
     let errorCount = props.errors;
     return(
         <BodyWrapper>
-            <Head errorCount={errorCount}/>
+            <Head errorCount={errorCount}>
+                <EyeLeft errorCount={errorCount}/>
+                <EyeRight errorCount={errorCount}/>
+            </Head>
             <Core errorCount={errorCount}/>
             <HandLeft errorCount={errorCount}/>
             <HandRight errorCount={errorCount}/>
