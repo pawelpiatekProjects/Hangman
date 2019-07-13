@@ -20,14 +20,18 @@ position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%,-50%);
-button{
-width: 15rem;
+a{
+width: 20rem;
 padding: 1rem;
 background: orange;
 border: 1px solid orange;
 border-radius: 5rem;
 color: #fff;
-
+text-align: center;
+display: block;
+margin: 5rem auto;
+text-decoration: none;
+text-transform: uppercase;
 &:focus{
 outline: none;
 background: darken(orange,8);//change

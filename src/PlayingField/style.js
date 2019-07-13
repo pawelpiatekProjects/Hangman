@@ -7,3 +7,7 @@ grid-gap: 5rem;
 margin: 5rem;
 height: calc(100vh - 10rem);
 `;
+
+export const Starter  = styled.div`
+
+`;

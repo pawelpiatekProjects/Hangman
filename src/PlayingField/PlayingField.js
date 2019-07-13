@@ -2,11 +2,13 @@ import React,{Component} from 'react';
 import KeyboardEventHandler from 'react-keyboard-event-handler';
 import axios from '../axios';
 
+
 import {PlayingWrapper} from './style';
 
 import Hangman from '../Hangman/Hangman';
 import WordField from '../WordsField/WordsField';
 import PopUp from '../Popup/Popup';
+
 
 class PlayingField extends Component{
     //firebase fetch in componentWillMount
@@ -115,6 +117,7 @@ class PlayingField extends Component{
 
         return(
             <div>
+
             <PlayingWrapper onKeyDown={(e)=> this.handleKeyPress(e)}>
                 <Hangman errors={this.state.errors}/>
                 <WordField word={this.state.word}
