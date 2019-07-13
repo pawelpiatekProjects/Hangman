@@ -1,9 +1,16 @@
 import React from 'react';
 
-import {PopupWrapper} from './style'
+import {PopupWrapper, PopupInfo} from './style'
 
 const popup = (props)=>{
-    let state = props.ending;
+    let messageState = props.ending;
+    let state;
+    console.log(messageState);
+    if(messageState.length>0){
+        state = 1;
+    }else {
+        state = 0;
+    }
     let message='';
     if(props.ending === 'lost'){
         message = 'You lost'
@@ -13,7 +20,13 @@ const popup = (props)=>{
     }
     return(
 
-        <PopupWrapper state>{message}</PopupWrapper>
+        <PopupWrapper state={state}>
+            <PopupInfo>
+                <h1>{message}</h1>
+                <button>Play Again</button>
+            </PopupInfo>
+
+        </PopupWrapper>
     );
 };
 
