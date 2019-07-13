@@ -121,8 +121,23 @@ position: absolute;
 top: 25rem;
 right: 50%;
 transform:  translate(-1rem,1rem) rotate(10deg);
-z-index: 1;
+z-index: 2;
 border-radius: 0 0 1rem 1rem;
+
+&::after{
+content: "";
+display: block;
+width: 7rem;
+height: 4rem;
+background: black;
+position: absolute;
+top: 14rem;
+right: 50%;
+clip-path: polygon(0 56%, 35% 57%, 92% 100%, 0% 100%);
+border-radius: 0 1rem 3rem 0;
+transform: rotateY(180deg) rotate(30deg) translatey(-1rem) translateX(-2rem);
+z-index: 1;
+}
 `;
 
 export const LegRight = styled.div`
@@ -134,6 +149,20 @@ position: absolute;
 top: 25rem;
 left: 50%;
 transform:  translate(1rem,1rem) rotate(-10deg);
-z-index: 1;
+z-index: 2;
 border-radius: 0 0 1rem 1rem;
+&::after{
+content: "";
+display: block;
+width: 7rem;
+height: 4rem;
+background: black;
+position: absolute;
+top: 14rem;
+right: 50%;
+clip-path: polygon(0 100%,  92% 100%,35% 57%, 0% 56%);
+border-radius: 0 1rem 3rem 0;
+transform:  rotate(30deg) translatey(-4.5rem) translateX(4rem);
+z-index: 1;
+}
 `;
