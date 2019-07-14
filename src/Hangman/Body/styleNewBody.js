@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const BodyWrapper = styled.div`
 
 
@@ -68,6 +69,42 @@ background-image: linear-gradient(to left bottom ,#8b4513 ,	#a26a42);
 position: absolute;
 transform: rotate(100deg) translateX(7rem) translateY(-6rem);
 }
+`;
+
+export const Haze = styled.div`
+  background: #eee;
+  width: 12rem;
+  height: 8rem;
+  position: absolute;
+  left: 35rem;
+  border-radius: 50%;
+  text-align: center;
+  padding: 3rem 1rem;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  &::before{
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 1rem;
+  background: #eee;
+  border-radius: 50%;
+  position: absolute;
+  top: 11rem;
+  left: -4rem;
+  }
+  &::after{
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 2rem;
+  background: #eee;
+  border-radius: 50%;
+  position: absolute;
+  top: 8rem;
+  left: -2rem;
+  }
+  
 `;
 
 
@@ -187,7 +224,7 @@ export const Core = styled.div`
   height: 10rem;
  background-color: 	#3CB371;
   position: absolute;
-  top: 4rem;
+  top: 3.9rem;
   clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
   border-radius: 0 0 5rem 5em;
   border-bottom: 7px solid 	#8B4513;
@@ -310,4 +347,13 @@ border-radius: 0 1rem 3rem 0;
 transform:  rotate(30deg) translatey(-4.5rem) translateX(4rem);
 z-index: 1;
 }
+`;
+
+export const Floor = styled.div`
+height: 3rem;
+width: 60rem;
+background-image: linear-gradient(to right bottom  ,#696969 ,#7e7e7e);
+position: absolute;
+left: -10rem;
+top: 53rem;
 `;

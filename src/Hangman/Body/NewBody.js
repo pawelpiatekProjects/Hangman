@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {BodyWrapper,Head,EyeLeft,EyeRight, Core, HandLeft, HandRight, LegLeft,LegRight,
-    GallowsTop,GallowsLeft,GallowsBottom,Neck} from './styleNewBody'
+    GallowsTop,GallowsLeft,GallowsBottom,Neck,Floor,Haze} from './styleNewBody'
 
 const newBody =()=>{
 
@@ -11,6 +11,7 @@ const newBody =()=>{
             <GallowsTop/>
             <GallowsLeft/>
             <GallowsBottom/>
+            <Haze>Let's play</Haze>
             <Head >
                 <EyeLeft/>
                 <EyeRight/>
@@ -21,6 +22,7 @@ const newBody =()=>{
             <HandRight />
             <LegLeft />
             <LegRight />
+            <Floor/>
 
         </BodyWrapper>
     );

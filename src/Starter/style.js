@@ -1,11 +1,14 @@
 import styled from 'styled-components';
+import backImg from '../img/antonio-sessa-nJLApZhFFbI-unsplash.jpg';
 
 export const StarterWrapper = styled.div`
 
 `;
 
 export const StarterMenu = styled.div`
-background-image: linear-gradient(to right bottom ,#333,#222);
+
+background: linear-gradient(to right bottom ,#333,#222) ;
+
 height: 100vh;
 padding: 25rem;
 display: flex;
