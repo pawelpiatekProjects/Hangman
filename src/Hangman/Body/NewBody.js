@@ -7,6 +7,7 @@ const newBody =()=>{
 
     return(
         <BodyWrapper>
+
             <GallowsTop/>
             <GallowsLeft/>
             <GallowsBottom/>
@@ -20,6 +21,7 @@ const newBody =()=>{
             <HandRight />
             <LegLeft />
             <LegRight />
+
         </BodyWrapper>
     );
 };
