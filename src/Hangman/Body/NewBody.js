@@ -1,13 +1,15 @@
 import React from 'react';
 
 import {BodyWrapper,Head,EyeLeft,EyeRight, Core, HandLeft, HandRight, LegLeft,LegRight,
-    Gallows,Neck} from './styleNewBody'
+    GallowsTop,GallowsLeft,GallowsBottom,Neck} from './styleNewBody'
 
 const newBody =()=>{
 
     return(
         <BodyWrapper>
-            <Gallows/>
+            <GallowsTop/>
+            <GallowsLeft/>
+            <GallowsBottom/>
             <Head >
                 <EyeLeft/>
                 <EyeRight/>

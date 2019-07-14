@@ -8,12 +8,56 @@ justify-self: center;
 margin: 3rem;
 padding: 3rem;
 position: relative;
+width: 50rem;
+`;
+
+export const GallowsTop = styled.div`
+width: 27.5rem;
+height: 3rem;
+background: saddlebrown;
+position: absolute;
+top: 0;
+left: 0;
 
 `;
 
-export const Gallows = styled.div`
+export const GallowsLeft = styled.div`
+width: 3rem;
+height: 50rem;
+background: saddlebrown;
+position:absolute ;
+top: 3rem;
+left: 0;
 
-`
+&::after{
+content: "";
+display: block;
+background: saddlebrown;
+height: 3rem;
+width: 17rem;
+position: absolute;
+transform: rotate(-45deg) translate(-2.75rem,2rem);
+}
+`;
+
+export const GallowsBottom = styled.div`
+height: 3rem;
+width: 15rem;
+background: saddlebrown;
+position: absolute;
+top: 45rem;
+transform: translateX(-12.5rem) rotate(-60deg) ;
+&::after{
+content: "";
+display: block;
+height: 3rem;
+width: 10rem;
+background: saddlebrown;
+position: absolute;
+transform: rotate(100deg) translateX(7rem) translateY(-6rem);
+}
+`;
+
 
 export const Head = styled.div`
   width: 10rem;
@@ -25,7 +69,7 @@ export const Head = styled.div`
   text-align: center;
   border-radius: 50%;
   position: absolute;
-  top: 3rem;
+  top: 8rem;//+5
   right: 50%;
   transform: translateX(50%);
   margin: 0 auto;
@@ -36,10 +80,10 @@ export const Head = styled.div`
   content: "";
   display: block;
   width: 1rem;
-  height: 3rem;
+  height: 5rem;
   background-color: brown;
   position: absolute;
-  top: -3rem;
+  top: -5rem;
   right: 50%;
   transform: translateX(50%);
   z-index: 1000;
@@ -117,7 +161,7 @@ export const Core = styled.div`
   display: inline-block;
   text-align: center;
   position: absolute;
-  top: 14.5rem;
+  top: 19.5rem;
   right: 50%;
   transform: translateX(50%);
   border-radius: 1rem 1rem 0 0;
@@ -144,7 +188,7 @@ width: 2.3rem;
 height: 12rem;
 background-image: linear-gradient(to right bottom ,#ffe39f ,	#ffad60);
 position: absolute;
-top: 14.5rem;
+top: 19.5rem;
 right: 50%;
 transform:  translate(-4rem,-.25rem) rotate(20deg);
 border-radius: 2rem;
@@ -164,7 +208,7 @@ width: 2.3rem;
 height: 12rem;
 background-image: linear-gradient(to right bottom ,#ffe39f ,	#ffad60);
 position: absolute;
-top: 14.5rem;
+top: 19.5rem;
 left: 50%;
 transform:  translate(4rem,-.25rem) rotate(-20deg);
 border-radius: 2rem;
@@ -186,7 +230,7 @@ height: 14rem;
 //background-color: brown;
 background-image: linear-gradient(to right bottom ,#3686e9 ,#0d3d78);
 position: absolute;
-top: 25rem;
+top: 30rem;
 right: 50%;
 transform:  translate(-1rem,1rem) rotate(10deg);
 z-index: 2;
@@ -214,7 +258,7 @@ height: 14rem;
 //background-color: brown;
 background-image: linear-gradient(to right bottom ,#3686e9 ,#0d3d78);
 position: absolute;
-top: 25rem;
+top: 30rem;
 left: 50%;
 transform:  translate(1rem,1rem) rotate(-10deg);
 z-index: 2;
