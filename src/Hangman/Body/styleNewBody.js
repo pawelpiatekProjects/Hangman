@@ -83,7 +83,7 @@ export const Head = styled.div`
   position: absolute;
   top: 8rem;//+5
   right: 50%;
-  transform: translateX(50%);
+  transform: translateX(50%) rotate(20deg);
   margin: 0 auto;
   z-index: 10;
 
@@ -95,9 +95,9 @@ export const Head = styled.div`
   height: 5rem;
   background-color: brown;
   position: absolute;
-  top: -5rem;
-  right: 50%;
-  transform: translateX(50%);
+  top: -4.75rem;
+  right: 7.5rem;
+  transform: translateX(50%) rotate(-20deg);
   z-index: 1000;
   }
 `;
@@ -147,9 +147,9 @@ height: 2.5rem;
 width: 2.5rem;
 background-image: linear-gradient(to right bottom ,#ffe39f ,	#ffad60);
 position: absolute;
- top: 9.75rem;
-left: 50%;
-transform: translateX(-50%);
+ top: 9.5rem;
+left: 7rem;
+transform: translateX(-50%) rotate(-20deg);
 display: block;
 z-index: 1000;
 border-radius: 0 0 10rem 10rem;
@@ -203,7 +203,15 @@ position: absolute;
 top: 19.5rem;
 right: 50%;
 transform:  translate(-4rem,-.25rem) rotate(20deg);
+
+animation: handLeftAnimation 1.5s infinite alternate;
 border-radius: 2rem;
+
+@keyframes handLeftAnimation {
+  0% { transform:  translate(-4rem,-.25rem) rotate(20deg); }
+  //50% { transform:  translate(-6rem,-5rem) rotate(90deg); }
+  100% { transform:  translate(-6rem,-7rem) rotate(120deg) }
+}
 
 &::after{
 content: "";
@@ -215,6 +223,10 @@ border-bottom: 3px solid #fff;
 display: block;
 `;
 
+
+
+
+
 export const HandRight = styled.div`
 width: 2.3rem;
 height: 12rem;
@@ -223,7 +235,15 @@ position: absolute;
 top: 19.5rem;
 left: 50%;
 transform:  translate(4rem,-.25rem) rotate(-20deg);
+
+animation: handRightAnimation 1.5s infinite alternate;
 border-radius: 2rem;
+
+@keyframes handRightAnimation {
+  0% { transform:  translate(4rem,-.25rem) rotate(-20deg); }
+  //50% { transform:  translate(6rem,-5rem) rotate(-90deg); }
+  100% { transform:  translate(6rem,-7rem) rotate(-120deg); }
+}
 
 &::after{
 content: "";

@@ -16,17 +16,29 @@ width: 50rem;
 export const GallowsTop = styled.div`
 width: 27.5rem;
 height: 3rem;
-background: saddlebrown;
+ background-image: linear-gradient(to right bottom ,#8b4513 ,	#a26a42);
 position: absolute;
 top: 0;
 left: 10rem;
+
+&::after{
+content: "";
+display: block;
+width: 1rem;
+height: 1rem;
+ background-image: radial-gradient(#555 ,	#333);
+border-radius: 50%;
+position: absolute;
+top: 1rem;
+left: 1rem;
+}
 
 `;
 
 export const GallowsLeft = styled.div`
 width: 3rem;
 height: 50rem;
-background: saddlebrown;
+ background-image: linear-gradient(to  bottom ,#8b4513 ,	#a26a42);
 position:absolute ;
 top: 3rem;
 left: 10rem;
@@ -45,7 +57,7 @@ transform: rotate(-45deg) translate(-2.75rem,2rem);
 export const GallowsBottom = styled.div`
 height: 3rem;
 width: 15rem;
-background: saddlebrown;
+background-image: linear-gradient(to left top ,#8b4513 ,	#a26a42);
 position: absolute;
 top: 45rem;
 left: 12.5rem;
@@ -55,7 +67,7 @@ content: "";
 display: block;
 height: 3rem;
 width: 10rem;
-background: saddlebrown;
+background-image: linear-gradient(to left bottom ,#8b4513 ,	#a26a42);
 position: absolute;
 transform: rotate(100deg) translateX(7rem) translateY(-6rem);
 }
