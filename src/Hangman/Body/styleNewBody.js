@@ -37,12 +37,12 @@ export const Head = styled.div`
   display: block;
   width: 1rem;
   height: 3rem;
-  background-color: orange;
+  background-color: brown;
   position: absolute;
   top: -3rem;
   right: 50%;
   transform: translateX(50%);
-  z-index: 1;
+  z-index: 1000;
   }
 `;
 
@@ -86,6 +86,29 @@ display: block;
 }
 `;
 
+export const Neck = styled.div`
+height: 2.5rem;
+width: 2.5rem;
+background-image: linear-gradient(to right bottom ,#ffe39f ,	#ffad60);
+position: absolute;
+ top: 9.75rem;
+left: 50%;
+transform: translateX(-50%);
+display: block;
+z-index: 1000;
+border-radius: 0 0 10rem 10rem;
+    &::after{
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 1.25rem;
+    position: absolute;
+    top: 2px;
+    background: brown;
+   transform: translateX(-2px);
+    }
+`;
+
 export const Core = styled.div`
   width: 7rem;
   height: 4rem;
@@ -94,7 +117,7 @@ export const Core = styled.div`
   display: inline-block;
   text-align: center;
   position: absolute;
-  top: 13rem;
+  top: 14.5rem;
   right: 50%;
   transform: translateX(50%);
   border-radius: 1rem 1rem 0 0;
@@ -121,7 +144,7 @@ width: 2.3rem;
 height: 12rem;
 background-image: linear-gradient(to right bottom ,#ffe39f ,	#ffad60);
 position: absolute;
-top: 13rem;
+top: 14.5rem;
 right: 50%;
 transform:  translate(-4rem,-.25rem) rotate(20deg);
 border-radius: 2rem;
@@ -141,7 +164,7 @@ width: 2.3rem;
 height: 12rem;
 background-image: linear-gradient(to right bottom ,#ffe39f ,	#ffad60);
 position: absolute;
-top: 13rem;
+top: 14.5rem;
 left: 50%;
 transform:  translate(4rem,-.25rem) rotate(-20deg);
 border-radius: 2rem;

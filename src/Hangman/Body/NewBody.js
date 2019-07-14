@@ -1,6 +1,7 @@
 import React from 'react';
 
-import {BodyWrapper,Head,EyeLeft,EyeRight, Core, HandLeft, HandRight, LegLeft,LegRight, Gallows} from './styleNewBody'
+import {BodyWrapper,Head,EyeLeft,EyeRight, Core, HandLeft, HandRight, LegLeft,LegRight,
+    Gallows,Neck} from './styleNewBody'
 
 const newBody =()=>{
 
@@ -10,6 +11,7 @@ const newBody =()=>{
             <Head >
                 <EyeLeft/>
                 <EyeRight/>
+                <Neck/>
             </Head>
             <Core />
             <HandLeft/>

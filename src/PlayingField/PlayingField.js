@@ -13,20 +13,7 @@ import PopUp from '../Popup/Popup';
 class PlayingField extends Component{
     //firebase fetch in componentWillMount
     state={
-
-            word:[
-                {wordContent: 'c', corectness: false},
-                {wordContent: 'o', corectness: false},
-                {wordContent: 'm', corectness: false},
-                {wordContent: 'p', corectness: false},
-                {wordContent: 'u', corectness: false},
-                {wordContent: 't', corectness: false},
-                {wordContent: 'e', corectness: false},
-                {wordContent: 'r', corectness: false}
-
-            ],
-
-
+        word:[],
         category:'Electronic device',
         length:0,
         goodMoves:0,

@@ -13,6 +13,7 @@ color: #fff;
 display: ${props=>props.state === 1? 'block' : 'none'};
 font-size: 3rem;
 
+
 `;
 
 export const PopupInfo = styled.div`

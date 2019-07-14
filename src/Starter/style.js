@@ -7,7 +7,7 @@ export const StarterWrapper = styled.div`
 export const StarterMenu = styled.div`
 background-image: linear-gradient(to right bottom ,#333,#222);
 height: 100vh;
-padding: 10rem;
+padding: 25rem;
 display: flex;
 align-items: center;
 justify-items: center;
