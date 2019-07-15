@@ -247,7 +247,7 @@ border-radius: 2rem;
 @keyframes handLeftAnimation {
   0% { transform:  translate(-4rem,-.25rem) rotate(20deg); }
   //50% { transform:  translate(-6rem,-5rem) rotate(90deg); }
-  100% { transform:  translate(-6rem,-7rem) rotate(120deg) }
+  100% { transform:  translate(-6.5rem,-7rem) rotate(120deg) }
 }
 
 &::after{
@@ -279,7 +279,7 @@ border-radius: 2rem;
 @keyframes handRightAnimation {
   0% { transform:  translate(4rem,-.25rem) rotate(-20deg); }
   //50% { transform:  translate(6rem,-5rem) rotate(-90deg); }
-  100% { transform:  translate(6rem,-7rem) rotate(-120deg); }
+  100% { transform:  translate(6.5rem,-7rem) rotate(-120deg); }
 }
 
 &::after{

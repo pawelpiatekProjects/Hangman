@@ -10,7 +10,7 @@ export const LetterWrapper = styled.p`
 export const Undreline = styled.div`
     content: "";
       display: inline-block;
-      border-bottom: 3px solid #fff;
+      border-bottom:${props=>props.empty==true ? 'none' : '3px solid #fff'} ;
       width: 5rem;
       height: 2px;
       position: absolute;
@@ -23,6 +23,7 @@ export const Undreline = styled.div`
 export const UnderlinedLetter = styled.div`
 position: relative;
 padding: 0 3rem;
+
 `;
 
 

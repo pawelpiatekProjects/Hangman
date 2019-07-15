@@ -7,7 +7,7 @@ export const BodyWrapper = styled.div`
 
 height: calc(100% - 6rem);
 justify-self: center;
-margin: 3rem;
+margin: 6rem 3rem 3rem 3rem;
 padding: 3rem;
 position: relative;
 width: 50rem;
@@ -191,7 +191,7 @@ export const Core = styled.div`
   height: 10rem;
  background-color: 	#3CB371;
   position: absolute;
-  top: 4rem;
+  top: 3.9rem;
   clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
   border-radius: 0 0 5rem 5em;
   border-bottom: 7px solid 	#8B4513;
@@ -298,4 +298,13 @@ border-radius: 0 1rem 3rem 0;
 transform:  rotate(30deg) translatey(-4.5rem) translateX(4rem);
 z-index: 1;
 }
+`;
+
+export const Floor = styled.div`
+height: 3rem;
+width: 50rem;
+background-image: linear-gradient(to right bottom  ,#696969 ,#7e7e7e);
+position: absolute;
+left: 0;
+top: 53rem;
 `;

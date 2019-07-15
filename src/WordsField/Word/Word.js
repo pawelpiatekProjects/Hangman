@@ -10,7 +10,8 @@ const word =(props)=>{
         <WordWrapper>
             {props.word.map(letter=>{
                 return <Letter letter={letter.wordContent.toUpperCase()}
-                visable={letter.corectness}/>
+                visable={letter.corectness}
+                empty={letter.empty}/>
 
             })}
         </WordWrapper>

@@ -2,7 +2,7 @@ import React from 'react';
 
 import {
     BodyWrapper, Head, EyeLeft, EyeRight, Neck, Core, HandLeft, HandRight, LegLeft,
-    LegRight, GallowsTop, GallowsLeft, GallowsBottom
+    LegRight, GallowsTop, GallowsLeft, GallowsBottom,Floor
 } from './style'
 
 
@@ -24,6 +24,7 @@ const body = (props) => {
                 <HandRight errorCount={errorCount}/>
                 <LegLeft errorCount={errorCount}/>
                 <LegRight errorCount={errorCount}/>
+                <Floor/>
 
         </BodyWrapper>
     );
