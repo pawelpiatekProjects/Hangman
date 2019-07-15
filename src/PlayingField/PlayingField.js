@@ -2,29 +2,18 @@ import React,{Component} from 'react';
 import KeyboardEventHandler from 'react-keyboard-event-handler';
 import axios from '../axios';
 
+
 import {PlayingWrapper} from './style';
 
 import Hangman from '../Hangman/Hangman';
 import WordField from '../WordsField/WordsField';
 import PopUp from '../Popup/Popup';
 
+
 class PlayingField extends Component{
     //firebase fetch in componentWillMount
     state={
-
-            word:[
-                {wordContent: 'c', corectness: false},
-                {wordContent: 'o', corectness: false},
-                {wordContent: 'm', corectness: false},
-                {wordContent: 'p', corectness: false},
-                {wordContent: 'u', corectness: false},
-                {wordContent: 't', corectness: false},
-                {wordContent: 'e', corectness: false},
-                {wordContent: 'r', corectness: false}
-
-            ],
-
-
+        word:[],
         category:'Electronic device',
         length:0,
         goodMoves:0,
@@ -41,23 +30,36 @@ class PlayingField extends Component{
             const arr = Object.keys(data).map(key=>{
                 return data[key];
             })
-            console.log(arr);
+
 
 
 
             const numberOfItems = arr.length;
             const index =this.generateRandom(numberOfItems);
             const wordLength = arr[index].name.length;
-            // console.log(wordLength);
+
 
             const wordValue = arr[index].name.split('').map(id=>{
-                return {wordContent:id, corectness:false}
+
+                if(id.charCodeAt(0)===32){
+                    return {wordContent:id, corectness:true,empty:true}
+
+
+
+                }else{
+                    return {wordContent:id, corectness:false,empty:false}
+
+                }
+
             });
             const category = arr[index].category;
-            // console.log(category)
 
 
-            this.setState({word:wordValue, category:category,length: wordLength});
+
+
+            this.setState({word:wordValue, category:category,length: wordLength,
+            });
+
         }).catch(error => console.log(error))
     }
 
@@ -67,11 +69,7 @@ class PlayingField extends Component{
         return Math.floor(Math.random()*(newMax-min+1))+min;
     }
 
-    // delay = (name)=>{
-    //     window.setTimeout(f=>{
-    //         this.setState({ending:name})
-    //     },300)
-    // }
+
 
     handleCheck =(key)=>{
         let errors =this.state.errors;
@@ -80,19 +78,18 @@ class PlayingField extends Component{
          const word = wordCoppy.map(item=>{
              return item.wordContent;
          })
-        //console.log(key);
-         //console.log(wordCoppy[0].wordContent);
+
          if(word.includes(key)){
              goodMoves++;
              this.setState({goodMoves:goodMoves})
              for(let index of Object.keys(wordCoppy)){
-                 //console.log(`${wordCoppy[index].wordContent} + ${key}`);
+
 
                  if(wordCoppy[index].wordContent === key){
                      wordCoppy[index].corectness = true;
                  }
              }
-             //console.log(this.state.goodMoves)
+
 
          }
          else {
@@ -105,7 +102,14 @@ class PlayingField extends Component{
              }
          }
         this.setState({word:wordCoppy});
-        if(goodMoves>=this.state.length){
+        let good=0;
+        const end =this.state.word.map(el=>{
+            console.log(el.corectness)
+            if(el.corectness===true)
+                good++
+        });
+        console.log(good);
+        if(good>=this.state.length){
             this.setState({ending:'won'})
         }
 
@@ -115,7 +119,9 @@ class PlayingField extends Component{
 
         return(
             <div>
+
             <PlayingWrapper onKeyDown={(e)=> this.handleKeyPress(e)}>
+
                 <Hangman errors={this.state.errors}/>
                 <WordField word={this.state.word}
                            category={this.state.category}

@@ -1,14 +1,15 @@
 import React from 'react';
+import {BrowserRouter} from 'react-router-dom'
 
 import './App.css';
 
-import PlayingField from './PlayingField/PlayingField';
-
+// import PlayingField from './PlayingField/PlayingField';
+import Starter from './Starter/Starter'
 function App() {
   return (
-    <div className="App">
-      <PlayingField/>
-    </div>
+    <BrowserRouter>
+      <Starter/>
+    </BrowserRouter>
   );
 }
 

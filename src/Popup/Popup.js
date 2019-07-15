@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import {PopupWrapper, PopupInfo} from './style'
 
@@ -23,7 +24,7 @@ const popup = (props)=>{
         <PopupWrapper state={state}>
             <PopupInfo>
                 <h1>{message}</h1>
-                <button>Play Again</button>
+                <Link to='/'>Play Again</Link>
             </PopupInfo>
 
         </PopupWrapper>

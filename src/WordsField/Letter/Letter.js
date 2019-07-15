@@ -14,7 +14,7 @@ const letter = (props) => {
     return (
         <UnderlinedLetter>
             <LetterWrapper display={display} >{props.letter}</LetterWrapper>
-            <Undreline/>
+            <Undreline empty={props.empty}/>
         </UnderlinedLetter>
     );
 };
