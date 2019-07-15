@@ -121,6 +121,7 @@ class PlayingField extends Component{
             <div>
 
             <PlayingWrapper onKeyDown={(e)=> this.handleKeyPress(e)}>
+
                 <Hangman errors={this.state.errors}/>
                 <WordField word={this.state.word}
                            category={this.state.category}

@@ -4,13 +4,15 @@ import {
     BodyWrapper, Head, EyeLeft, EyeRight, Neck, Core, HandLeft, HandRight, LegLeft,
     LegRight, GallowsTop, GallowsLeft, GallowsBottom,Floor
 } from './style'
+import {Link} from "react-router-dom";
+
 
 
 const body = (props) => {
     let errorCount = props.errors;
     return (
         <BodyWrapper>
-
+                <Link to='/'>Menu</Link>
                 <GallowsTop/>
                 <GallowsLeft/>
                 <GallowsBottom/>

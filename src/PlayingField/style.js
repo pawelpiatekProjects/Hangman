@@ -11,3 +11,4 @@ height: calc(100vh - 10rem);
 export const Starter  = styled.div`
 
 `;
+
