@@ -5,7 +5,7 @@
   Hangman
 </h1>
 
-***
+
 [Deployed app](https://focused-payne-4a5ab2.netlify.app/)
 
 
