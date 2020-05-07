@@ -5,6 +5,9 @@
   Hangman
 </h1>
 
+***
+[Deployed app](https://focused-payne-4a5ab2.netlify.app/)
+
 
 ***"Hangman"*** is a React app with data base on firebase. My first own react app.
 
